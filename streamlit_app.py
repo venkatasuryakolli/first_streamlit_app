@@ -13,6 +13,9 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
+streamlit.write('Thanks for adding ', add_my_fruit)
+my_cur.execute("insert into from FRUIT_LOAD_LIST values ('from streamlit')")
+
 # from urllib.error import URLError
 
 streamlit.header("Fruityvice Fruit Advice!")
