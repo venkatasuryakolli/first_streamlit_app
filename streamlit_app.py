@@ -8,8 +8,10 @@ import requests
 
 # from urllib.error import URLError
 
+streamlit.header("Fruityvice Fruit Advice!")
+
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
+streamlit.text(fruityvice_response.json())
 
 
 # def get_fruityvice_data(this_fruit_choice):
